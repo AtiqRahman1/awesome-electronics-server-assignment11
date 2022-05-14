@@ -19,6 +19,7 @@ async function run() {
         await client.connect();
         const inventoryCollection = client.db('awesomeElectro').collection('inventory');
 
+        // GET
         app.get('/inventory', async (req, res) => {
             const query = {};
             const cursor = inventoryCollection.find(query);
