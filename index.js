@@ -37,12 +37,6 @@ async function run() {
             res.send(inventories);
         });
 
-        app.get('/inventory/:id', async (req, res) => {
-            const id = req.params.id;
-            const query = { _id: ObjectId(id) };
-            const inventory = await inventoryCollection.findOne(query);
-            res.send(inventory);
-        });
 
         // POST
         app.post('/inventory', async (req, res) => {
