@@ -65,6 +65,10 @@ app.get('/', (req, res) => {
     res.send('Running Server Side');
 });
 
+app.get('/heroku', (req, res) => {
+    res.send('Heroku is running')
+});
+
 app.listen(port, () => {
     console.log('Listening to port', port);
 });
